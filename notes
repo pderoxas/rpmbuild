@@ -1,0 +1,12 @@
+
+#create source tarball
+cd /rpmbuild/SOURCES
+tar -czvf paypal-puppet-agent-0.0.1.tar.gz paypal-puppet-agent-0.0.1
+
+#build the rpm
+cd /rpmbuild/SPECS
+rpmbuild -bb paypal_puppet_agent.spec
+
+#copy to yum repo host
+cd /rpmbuild/RPMS/noarch
+scp paypal-puppet-agent-0.0.1-1.el6.noarch.rpm root@192.168.1.13:/var/www/html/paypal/noarch/

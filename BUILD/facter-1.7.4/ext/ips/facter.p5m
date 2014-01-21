@@ -1,0 +1,10 @@
+set name=pkg.fmri value=pkg://puppetlabs.com/application/facter@1.7.4,3.2.0-3-amd64-0
+set name=pkg.summary value="Facter, a system inventory tool"
+set name=pkg.human-version value="1.7.4"
+set name=pkg.description value="You can prove anything with facts!"
+set name=info.classification value="org.opensolaris.category.2008:Applications/System Utilities"
+set name=org.opensolaris.consolidation value="puppet"
+set name=description value="You can prove anything with facts!"
+set name=variant.opensolaris.zone value=global value=nonglobal
+set name=variant.arch value=sparc value=i386
+license facter.license license="Apache v2.0"
