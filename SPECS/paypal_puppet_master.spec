@@ -1,11 +1,11 @@
 # VERSION is subbed out during rake srpm process
-%global realversion 0.0.1
-%global rpmversion 0.0.1
+%global realversion 1.0
+%global rpmversion 1.0
 
 Name:		paypal-puppet-master
 Version:	%{rpmversion}
 Release:	1%{?dist}
-Summary:	DEMO version of the PayPal POS SDK Puppet RPM
+Summary:	PayPal POS SDK Puppet RPM
 
 Group:		PayPal Puppet DEMO
 License:	GPL
@@ -19,14 +19,6 @@ Requires:	puppet-server >= 3.4.2
 
 %description
 PayPal Puppet Package
-
-%package setup
-Group:          System Environment/Base
-Summary:        PayPal Puppet Package DEMO
-Requires:       puppet = %{version}-%{release}
-
-%description setup
-Provides the setup scripts for the PayPal Puppet Master.
 
 %prep
 %setup -q

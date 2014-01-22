@@ -2,7 +2,7 @@
 %global realversion 0.0.1
 %global rpmversion 0.0.1
 
-Name:		paypal-puppet
+Name:		paypal-puppet-master
 Version:	%{rpmversion}
 Release:	1%{?dist}
 Summary:	DEMO version of the PayPal POS SDK Puppet RPM
@@ -15,7 +15,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 #BuildRequires:	
 BuildArch:      noarch
-Requires:	puppet >= 3.4.2
+Requires:	puppet-server >= 3.4.2
 
 %description
 PayPal Puppet Package
@@ -26,7 +26,7 @@ Summary:        PayPal Puppet Package DEMO
 Requires:       puppet = %{version}-%{release}
 
 %description setup
-Provides the setup scripts for the PayPal Puppet Agent.
+Provides the setup scripts for the PayPal Puppet Master.
 
 %prep
 %setup -q
@@ -34,12 +34,12 @@ Provides the setup scripts for the PayPal Puppet Agent.
 %build
 
 %install
-install -m 0777 paypal-puppet-setup.sh %{buildroot}/paypal-puppet-setup.sh
+install -m 0777 paypal-puppet-master-setup.sh %{buildroot}/paypal-puppet-master-setup.sh
 
 %clean
 
 %files
-/paypal-puppet-setup.sh
+/paypal-puppet-master-setup.sh
 
 %defattr(-,root,root,-)
 %doc

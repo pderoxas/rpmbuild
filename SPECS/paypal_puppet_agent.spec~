@@ -1,13 +1,13 @@
 # VERSION is subbed out during rake srpm process
-%global realversion 0.0.1
-%global rpmversion 0.0.1
+%global realversion 1.0
+%global rpmversion 1.0
 
 Name:		paypal-puppet-agent
 Version:	%{rpmversion}
 Release:	1%{?dist}
-Summary:	DEMO version of the PayPal POS SDK Puppet RPM
+Summary:	PayPay Retail POS SDK Puppet RPM
 
-Group:		PayPal Puppet DEMO
+Group:		PayPal Puppet
 License:	GPL
 URL:		http://www.paypal.com
 Source0:	%{name}-%{realversion}.tar.gz
@@ -37,10 +37,6 @@ Provides the setup scripts for the PayPal Puppet Agent.
 install -m 0777 paypal-puppet-agent-setup.sh %{buildroot}/paypal-puppet-agent-setup.sh
 
 %post
-echo "=========================================================================="
-bash /paypal-puppet-agent-setup.sh
-echo "PayPal Puppet Agent Install is complete!"
-echo "=========================================================================="
 
 %clean
 
